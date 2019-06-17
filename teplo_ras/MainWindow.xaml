@@ -5,79 +5,123 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:teplo_ras"
         mc:Ignorable="d"
-        Title="MainWindow" Height="2288.651" Width="1073.625">
-	<Grid Margin="0,17,-5601,-532.8" RenderTransformOrigin="0.799,0.537">
-		<Grid.RowDefinitions>
-			<RowDefinition Height="562*"/>
-			<RowDefinition Height="231*"/>
-		</Grid.RowDefinitions>
-		<Grid.RenderTransform>
-			<TransformGroup>
-				<ScaleTransform/>
-				<SkewTransform/>
-				<RotateTransform Angle="0.212"/>
-				<TranslateTransform/>
-			</TransformGroup>
-		</Grid.RenderTransform>
-		<Grid.ColumnDefinitions>
-			<ColumnDefinition Width="519*"/>
-			<ColumnDefinition Width="438*"/>
-			<ColumnDefinition Width="1044*"/>
-			<ColumnDefinition Width="452*"/>
-			<ColumnDefinition Width="890*"/>
-			<ColumnDefinition Width="302*"/>
-			<ColumnDefinition Width="3207*"/>
-			<ColumnDefinition Width="0*"/>
-		</Grid.ColumnDefinitions>
-		<ComboBox x:Name="comboBox1" HorizontalAlignment="Left" Height="25" Margin="502,109,0,0" VerticalAlignment="Top" Width="146" SelectionChanged="ComboBox1_SelectionChanged" SelectedIndex="0" Grid.ColumnSpan="2">
-			<ComboBox.Background>
-				<LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
-					<GradientStop Color="#FFF0F0F0" Offset="0"/>
-					<GradientStop Color="#FFC24949" Offset="1"/>
-				</LinearGradientBrush>
-			</ComboBox.Background>
-		</ComboBox>
-		<ComboBox x:Name="comboBox2" HorizontalAlignment="Left" Height="25" Margin="214.8,109,0,0" VerticalAlignment="Top" Width="168" SelectionChanged="ComboBox2_SelectionChanged" SelectedIndex="0" Grid.Column="1" Background="#FF47ED09" BorderBrush="#FFA01F1F"/>
-		<Label Content="Влажность в помешении" HorizontalAlignment="Left" Height="25" Margin="504,149,0,0" VerticalAlignment="Top" Width="328" Foreground="#FF5D3E3E" Grid.ColumnSpan="2"/>
-		<Label Content="Коэффициент зависимости положения поверхности по отношению к наружному воздуxу" HorizontalAlignment="Left" Height="25" Margin="502,174,0,0" VerticalAlignment="Top" Width="506" Grid.ColumnSpan="3"/>
-		<Label Content="Коэффициент теплоотдачи внутренней поверзности" HorizontalAlignment="Left" Height="25" Margin="504,198,0,0" VerticalAlignment="Top" Width="328" RenderTransformOrigin="0.477,1.715" Grid.ColumnSpan="2"/>
-		<Label Content="Коэффициент теплоотдачи наружной поверзности" HorizontalAlignment="Left" Height="25" Margin="504,222,0,0" VerticalAlignment="Top" Width="328" Grid.ColumnSpan="2"/>
-		<Label Content="Нормируемый температурный перепад" HorizontalAlignment="Left" Height="25" Margin="504,247,0,0" VerticalAlignment="Top" Width="328" Grid.ColumnSpan="2"/>
-		<TextBox x:Name="textBox3" TextAlignment="Right" HorizontalAlignment="Left" Height="25" Margin="55.4,149,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="35" AutomationProperties.Name="textBox3" Grid.Column="2" RenderTransformOrigin="0.361,0.128" BorderBrush="#00000000"/>
-		<TextBox x:Name="textBox4" TextAlignment="Right" HorizontalAlignment="Left" Height="25" Margin="55.4,174,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="35" RenderTransformOrigin="2.237,3.505" Grid.Column="2" BorderBrush="Transparent"/>
-		<TextBox x:Name="textBox5" TextAlignment="Right" HorizontalAlignment="Left" Height="25" Margin="55.4,197,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="35" TextChanged="TextBox5_TextChanged" Grid.Column="2" RenderTransformOrigin="1.08,0.485"/>
-		<TextBox x:Name="textBox6" TextAlignment="Right" HorizontalAlignment="Left" Height="25" Margin="55.4,220,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="35" Grid.Column="2"/>
-		<TextBox x:Name="textBox7" TextAlignment="Right" HorizontalAlignment="Left" Height="25" Margin="55.4,247,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="35" Grid.Column="2" BorderBrush="Transparent"/>
-		<Label Content="Помещение" HorizontalAlignment="Left" Height="33" Margin="214.8,80,0,0" VerticalAlignment="Top" Width="98" Grid.Column="1" FontFamily="Showcard Gothic" FontSize="14" FontWeight="Bold" Foreground="#FF5D3E3E"/>
-		<Label Content="Тип конструкции" HorizontalAlignment="Left" Height="33" Margin="502,80,0,0" VerticalAlignment="Top" Width="146" FontFamily="Showcard Gothic" FontWeight="Bold" FontSize="14" Grid.ColumnSpan="2" Foreground="#FF5D3E3E"/>
-		<ComboBox x:Name="comboBox3" Height="38" Margin="88,348,1009.6,0" VerticalAlignment="Top" SelectionChanged="ComboBox3_SelectionChanged" SelectedIndex="0" Grid.ColumnSpan="3"/>
-		<WrapPanel HorizontalAlignment="Left" Height="1" Margin="88,1545,0,0" VerticalAlignment="Top" Width="6"/>
-		<DataGrid x:Name="dataGrid1" HorizontalAlignment="Left" Height="167" Margin="89,592,0,0" VerticalAlignment="Top" Width="570" SelectionChanged="DataGrid_SelectionChanged" Grid.ColumnSpan="2"/>
-		<DataGrid x:Name="dataGrid2"  HorizontalAlignment="Left" Height="167" Margin="88,403,0,0" VerticalAlignment="Top" Width="570" SelectionChanged="DataGrid_SelectionChanged" SelectedIndex="0" Grid.ColumnSpan="2"/>
-		<Label Content="Населенный пункт " HorizontalAlignment="Left" Height="33" Margin="40,80,0,0" VerticalAlignment="Top" Width="177" FontWeight="Bold" FontSize="14" FontFamily="Showcard Gothic" Background="#00000000" Foreground="#FF5D3E3E"/>
-		<Label Content="Основные климатические параметры:" HorizontalAlignment="Left" Height="33" Margin="40,139,0,0" VerticalAlignment="Top" Width="328" FontWeight="Bold" FontSize="14" Foreground="#FF5D3E3E"/>
-		<Label Content="Температура холодной пятидневки с обеспеченностью 0,92" Height="25" Margin="40,172,119.2,0" VerticalAlignment="Top"/>
-		<Label Content="Продолжительность отопительного периода" HorizontalAlignment="Left" Height="25" Margin="40,197,0,0" VerticalAlignment="Top" Width="328"/>
-		<Label Content="Средняя температура воздуха отопительного периода" HorizontalAlignment="Left" Height="25" Margin="40,220,0,0" VerticalAlignment="Top" Width="328"/>
-		<Label Content="Условия эксплутации помещения" HorizontalAlignment="Left" Height="25" Margin="40,267,0,0" VerticalAlignment="Top" Width="328"/>
-		<Label Content="ГСОП" HorizontalAlignment="Left" Height="25" Margin="40,292,0,0" VerticalAlignment="Top" Width="328"/>
-		<TextBox x:Name="textBox8" TextAlignment="Right"  HorizontalAlignment="Left" Height="25" Margin="400,173,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="35" SelectionBrush="#FF26455D" BorderBrush="#00000000" Foreground="#FF230808"/>
-		<TextBox x:Name="textBox9" TextAlignment="Right" Padding="0" HorizontalAlignment="Left" Height="25" Margin="400,197,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="35" RenderTransformOrigin="2.725,1.518" BorderBrush="#00000000" Foreground="#FF2B1313"/>
-		<TextBox x:Name="textBox10" TextAlignment="Right" Padding="0" HorizontalAlignment="Left" Height="25" Margin="400,220,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="35" TextChanged="TextBox10_TextChanged" BorderBrush="Transparent"/>
-		<TextBox x:Name="textBox12" TextAlignment="Right" HorizontalAlignment="Left" Height="25" Margin="400,267,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="35" RenderTransformOrigin="0.364,-1.133" BorderBrush="#00000000"/>
-		<TextBox x:Name="textBox13" Padding="0" TextAlignment="Right"  HorizontalAlignment="Left" Height="25" Margin="394,292,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="41" BorderBrush="Transparent"/>
-		<ComboBox x:Name="comboBox4" HorizontalAlignment="Left" Height="25" Margin="40,109,0,0" VerticalAlignment="Top" Width="110" SelectionChanged="ComboBox_SelectionChanged"/>
-		<Label Content="Относительная влажность воздуха наиболее холодного месяца" Height="25" Margin="40,245,119.2,0" VerticalAlignment="Top" RenderTransformOrigin="0.444,-1.916"/>
-		<TextBox x:Name="textBox11" TextAlignment="Right" HorizontalAlignment="Left" Height="25" Margin="400,245,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="35" BorderBrush="#00000000"/>
-		<Label Content="С °" HorizontalAlignment="Left" Height="25" Margin="440,168,0,0" VerticalAlignment="Top" Width="32" RenderTransformOrigin="0.625,1.235"/>
-		<Label Content="суток" HorizontalAlignment="Left" Height="25" Margin="441,198,0,0" VerticalAlignment="Top" Width="44" RenderTransformOrigin="0.625,1.235"/>
-		<Label Content="С °" HorizontalAlignment="Left" Height="25" Margin="441,216,0,0" VerticalAlignment="Top" Width="32" RenderTransformOrigin="0.625,1.235"/>
-		<Label Content="С °·сут" HorizontalAlignment="Left" Height="25" Margin="435,287,0,0" VerticalAlignment="Top" Width="44" RenderTransformOrigin="0.625,1.235"/>
-		<Label Content="%" HorizontalAlignment="Left" Height="25" Margin="441,241,0,0" VerticalAlignment="Top" Width="32" RenderTransformOrigin="0.625,1.235"/>
-		<Label Content="С °" HorizontalAlignment="Left" Height="25" Margin="95.4,242,0,0" VerticalAlignment="Top" Width="32" RenderTransformOrigin="0.625,1.235" Grid.Column="2"/>
-		<Label Content="%" HorizontalAlignment="Left" Height="25" Margin="95.4,145,0,0" VerticalAlignment="Top" Width="32" RenderTransformOrigin="0.625,1.235" Grid.Column="2"/>
-		<Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="86" Margin="400,48,0,0" VerticalAlignment="Top" Width="0"/>
-		<GridSplitter HorizontalAlignment="Left" Height="263" Margin="485,80,0,0" VerticalAlignment="Top" Width="1" Background="#FF1F1C1C" FontSize="20"/>
-		<Button Content="Рассчет" Grid.Column="1" HorizontalAlignment="Left" Height="60" Margin="242.2,442,0,0" VerticalAlignment="Top" Width="160"/>
-	</Grid>
+          x:Name="ThisControl"
+        Title="MainWindow" Height="801.94" Width="1431.194">
+    <Grid Margin="0,17,-5601,-532.8" RenderTransformOrigin="0.799,0.537">
+
+        <Grid.RenderTransform>
+            <TransformGroup>
+                <ScaleTransform/>
+                <SkewTransform/>
+                <RotateTransform Angle="0.212"/>
+                <TranslateTransform/>
+            </TransformGroup>
+        </Grid.RenderTransform>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="545*"/>
+            <ColumnDefinition Width="341*"/>
+            <ColumnDefinition Width="82*"/>
+            <ColumnDefinition Width="145*"/>
+            <ColumnDefinition Width="477*"/>
+            <ColumnDefinition Width="476*"/>
+            <ColumnDefinition Width="476*"/>
+            <ColumnDefinition Width="935*"/>
+            <ColumnDefinition Width="318*"/>
+            <ColumnDefinition Width="3373*"/>
+            <ColumnDefinition Width="0*"/>
+        </Grid.ColumnDefinitions>
+        <ComboBox x:Name="comboBox1" HorizontalAlignment="Left" Height="25" Margin="502,109,0,0" VerticalAlignment="Top" Width="146" SelectionChanged="ComboBox1_SelectionChanged" Grid.ColumnSpan="2">
+            <ComboBox.Background>
+                <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                    <GradientStop Color="#FFF0F0F0" Offset="0"/>
+                    <GradientStop Color="#FFC24949" Offset="1"/>
+                </LinearGradientBrush>
+            </ComboBox.Background>
+        </ComboBox>
+        <Button x:Name="btn2" Content="обновить" HorizontalAlignment="Left" 
+        Height="52" Margin="0.2,216,0,0" VerticalAlignment="Top" Width="161" Click="Button_Click" RenderTransformOrigin="0.31,0.765" Grid.ColumnSpan="2" Grid.Column="2"/>
+        <ComboBox x:Name="comboBox2" HorizontalAlignment="Left" Height="25" Margin="215.2,109,0,0" VerticalAlignment="Top" Width="168" SelectionChanged="ComboBox2_SelectionChanged" Grid.Column="1" Background="#FF47ED09" BorderBrush="#FFA01F1F" Grid.ColumnSpan="2"/>
+        <Label Content="Влажность в помешении" HorizontalAlignment="Left" Height="25" Margin="504,149,0,0" VerticalAlignment="Top" Width="328" Foreground="#FF5D3E3E" Grid.ColumnSpan="2"/>
+        <Label Content="Коэффициент зависимости положения поверхности по отношению к нар-ому воздуxу" HorizontalAlignment="Left" Height="25" Margin="502,174,0,0" VerticalAlignment="Top" Width="506" Grid.ColumnSpan="4"/>
+        <Label Content="Коэффициент теплоотдачи внутренней поверзности" HorizontalAlignment="Left" Height="25" Margin="504,198,0,0" VerticalAlignment="Top" Width="328" RenderTransformOrigin="0.477,1.715" Grid.ColumnSpan="2"/>
+        <Label Content="Коэффициент теплоотдачи наружной поверзности" HorizontalAlignment="Left" Height="25" Margin="504,222,0,0" VerticalAlignment="Top" Width="328" Grid.ColumnSpan="2"/>
+        <Label Content="Нормируемый температурный перепад" HorizontalAlignment="Left" Height="25" Margin="504,247,0,0" VerticalAlignment="Top" Width="328" Grid.ColumnSpan="2"/>
+        <TextBox x:Name="textBox3" TextAlignment="Right" HorizontalAlignment="Left" Height="25" Margin="55,149,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="35" AutomationProperties.Name="textBox3" Grid.Column="3" RenderTransformOrigin="0.361,0.128" BorderBrush="#00000000"/>
+        <TextBox x:Name="textBox4" TextAlignment="Right" HorizontalAlignment="Left" Height="25" Margin="55.2,174,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="35" RenderTransformOrigin="2.237,3.505" Grid.Column="3" BorderBrush="Transparent"/>
+        <TextBox x:Name="textBox5" TextAlignment="Right" HorizontalAlignment="Left" Height="25" Margin="55,197,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="35" TextChanged="TextBox5_TextChanged" Grid.Column="3" RenderTransformOrigin="1.08,0.485" BorderBrush="Transparent"/>
+        <TextBox x:Name="textBox6" TextAlignment="Right" HorizontalAlignment="Left" Height="25" Margin="55,220,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="35" Grid.Column="3" BorderBrush="Transparent"/>
+        <TextBox x:Name="textBox7" TextAlignment="Right" HorizontalAlignment="Left" Height="25" Margin="55,247,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="35" Grid.Column="3" BorderBrush="Transparent"/>
+        <Label Content="Тип конструкции" HorizontalAlignment="Left" Height="33" Margin="215.6,80,0,0" VerticalAlignment="Top" Width="125" Grid.Column="1" FontFamily="Showcard Gothic" FontSize="14" FontWeight="Bold" Foreground="#FF5D3E3E" Grid.ColumnSpan="2"/>
+        <Label Content="Помещение" HorizontalAlignment="Left" Height="33" Margin="502,80,0,0" VerticalAlignment="Top" Width="146" FontFamily="Showcard Gothic" FontWeight="Bold" FontSize="14" Grid.ColumnSpan="2" Foreground="#FF5D3E3E"/>
+        <ComboBox x:Name="comboBox3" Height="38" Margin="35,375,332.4,0" VerticalAlignment="Top" SelectionChanged="ComboBox3_SelectionChanged" SelectedIndex="0"/>
+        <WrapPanel HorizontalAlignment="Left" Height="1" Margin="88,1545,0,0" VerticalAlignment="Top" Width="6"/>
+        <DataGrid x:Name="dataGrid1" HorizontalAlignment="Left" Height="387" Margin="233,863,0,0" VerticalAlignment="Top" Width="570" SelectionChanged="DataGrid_SelectionChanged" Grid.ColumnSpan="2"/>
+        <Label Content="Населенный пункт " HorizontalAlignment="Left" Height="33" Margin="40,80,0,0" VerticalAlignment="Top" Width="177" FontWeight="Bold" FontSize="14" FontFamily="Showcard Gothic" Background="#00000000" Foreground="#FF5D3E3E"/>
+        <Label Content="Основные климатические параметры:" HorizontalAlignment="Left" Height="33" Margin="40,139,0,0" VerticalAlignment="Top" Width="328" FontWeight="Bold" FontSize="14" Foreground="#FF5D3E3E"/>
+        <Label Content="Температура холодной пятидневки с обеспеченностью 0,92" Height="25" Margin="40,172,118.8,0" VerticalAlignment="Top"/>
+        <Label Content="Продолжительность отопительного периода" HorizontalAlignment="Left" Height="25" Margin="40,197,0,0" VerticalAlignment="Top" Width="328"/>
+        <Label Content="Средняя температура воздуха отопительного периода" HorizontalAlignment="Left" Height="25" Margin="40,220,0,0" VerticalAlignment="Top" Width="328"/>
+        <Label Content="Условия эксплутации помещения" HorizontalAlignment="Left" Height="25" Margin="40,267,0,0" VerticalAlignment="Top" Width="328"/>
+        <Label Content="ГСОП" HorizontalAlignment="Left" Height="25" Margin="40,292,0,0" VerticalAlignment="Top" Width="328"/>
+        <TextBox x:Name="textBox8" TextAlignment="Right"  HorizontalAlignment="Left" Height="25" Margin="400,173,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="35" SelectionBrush="#FF26455D" BorderBrush="#00000000" Foreground="#FF230808"/>
+        <TextBox x:Name="textBox9" TextAlignment="Right" Padding="0" HorizontalAlignment="Left" Height="25" Margin="400,197,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="35" RenderTransformOrigin="2.725,1.518" BorderBrush="#00000000" Foreground="#FF2B1313"/>
+        <TextBox x:Name="textBox10" TextAlignment="Right" Padding="0" HorizontalAlignment="Left" Height="25" Margin="400,220,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="35" TextChanged="TextBox10_TextChanged" BorderBrush="Transparent"/>
+        <TextBox x:Name="textBox12" TextAlignment="Right" HorizontalAlignment="Left" Height="25" Margin="400,267,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="35" RenderTransformOrigin="0.364,-1.133" BorderBrush="#00000000"/>
+        <TextBox x:Name="textBox13" Padding="0" TextAlignment="Right"  HorizontalAlignment="Left" Height="25" Margin="394,292,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="41" BorderBrush="Transparent"/>
+        <ComboBox x:Name="comboBox4" HorizontalAlignment="Left" Height="25" Margin="40,109,0,0" VerticalAlignment="Top" Width="110" SelectionChanged="ComboBox_SelectionChanged"/>
+        <Label Content="Относительная влажность воздуха наиболее холодного месяца" Height="25" Margin="40,245,118.8,0" VerticalAlignment="Top" RenderTransformOrigin="0.444,-1.916"/>
+        <TextBox x:Name="textBox11" TextAlignment="Right" HorizontalAlignment="Left" Height="25" Margin="400,245,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="35" BorderBrush="#00000000"/>
+        <Label Content="С °" HorizontalAlignment="Left" Height="25" Margin="440,168,0,0" VerticalAlignment="Top" Width="32" RenderTransformOrigin="0.625,1.235"/>
+        <Label Content="суток" HorizontalAlignment="Left" Height="25" Margin="441,198,0,0" VerticalAlignment="Top" Width="44" RenderTransformOrigin="0.625,1.235"/>
+        <Label Content="С °" HorizontalAlignment="Left" Height="25" Margin="441,216,0,0" VerticalAlignment="Top" Width="32" RenderTransformOrigin="0.625,1.235"/>
+        <Label Content="С °·сут" HorizontalAlignment="Left" Height="25" Margin="435,287,0,0" VerticalAlignment="Top" Width="44" RenderTransformOrigin="0.625,1.235"/>
+        <Label Content="%" HorizontalAlignment="Left" Height="25" Margin="441,241,0,0" VerticalAlignment="Top" Width="32" RenderTransformOrigin="0.625,1.235"/>
+        <Label Content="С °" HorizontalAlignment="Left" Height="25" Margin="95,242,0,0" VerticalAlignment="Top" Width="32" RenderTransformOrigin="0.625,1.235" Grid.Column="3"/>
+        <Label Content="%" HorizontalAlignment="Left" Height="25" Margin="95,145,0,0" VerticalAlignment="Top" Width="32" RenderTransformOrigin="0.625,1.235" Grid.Column="3"/>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="86" Margin="400,48,0,0" VerticalAlignment="Top" Width="0"/>
+
+
+
+
+        <Label Content="Label" Grid.Column="1" HorizontalAlignment="Left" Height="15" Margin="200.2,687,0,0" VerticalAlignment="Top" Width="140"/>
+        <Label Content="Выберите материалы" HorizontalAlignment="Left" Height="33" Margin="35,342,0,0" VerticalAlignment="Top" Width="365"/>
+
+
+        <Expander Header="Добавить город" HorizontalAlignment="Left" Height="307" Margin="9.6,313,0,0" VerticalAlignment="Top" Width="748" FontSize="20" Grid.ColumnSpan="4" BorderBrush="#00000000" Grid.Column="1">
+            <Canvas HorizontalAlignment="Left" Height="423" Width="745">
+                <Button Content="Добавить" Height="60" Canvas.Left="575" Canvas.Top="10" Width="160" Click="Button_Click_1"/>
+                <Label Content="Населенный пункт " HorizontalAlignment="Left" Height="33" VerticalAlignment="Top" Width="177" FontWeight="Bold" FontSize="14" FontFamily="Showcard Gothic" Background="#00000000" Foreground="#FF5D3E3E" Canvas.Left="20"/>
+                <Label Content="Основные климатические параметры:" HorizontalAlignment="Left" Height="33" VerticalAlignment="Top" Width="328" FontWeight="Bold" FontSize="14" Foreground="#FF5D3E3E" Canvas.Left="20" Canvas.Top="66"/>
+                <Label Content="Температура холодной пятидневки с обеспеченностью 0,92" Height="36" VerticalAlignment="Top" Canvas.Left="20" Canvas.Top="99"/>
+                <Label Content="Продолжительность отопительного периода" HorizontalAlignment="Left" Height="32" VerticalAlignment="Top" Width="422" Canvas.Left="20" Canvas.Top="135"/>
+                <Label Content="Средняя температура воздуха отопительного периода" HorizontalAlignment="Left" Height="35" VerticalAlignment="Top" Width="543" Canvas.Left="20" Canvas.Top="172"/>
+                <Label Content="Относительная влажность воздуха наиболее холодного месяца" HorizontalAlignment="Left" Height="35" VerticalAlignment="Top" Width="597" Canvas.Left="20" Canvas.Top="212"/>
+                <TextBox x:Name="gorod" Height="28" Canvas.Left="29" TextWrapping="Wrap" Canvas.Top="33" Width="118"/>
+                <TextBox x:Name="l2" Height="36" Canvas.Left="617" TextWrapping="Wrap" Canvas.Top="140" Width="50"/>
+                <TextBox x:Name="l3" Height="36" Canvas.Left="617" TextWrapping="Wrap" Canvas.Top="176" Width="50" RenderTransformOrigin="0.499,0.985"/>
+                <TextBox x:Name="l4" Height="36" Canvas.Left="617" TextWrapping="Wrap" Canvas.Top="211" Width="50"/>
+                <TextBox x:Name="l1" Height="36" Canvas.Left="617" TextWrapping="Wrap" Canvas.Top="99" Width="50"/>
+                <Label Content="С °" HorizontalAlignment="Left" Height="37" VerticalAlignment="Top" Width="41" RenderTransformOrigin="0.625,1.235" Canvas.Left="672" Canvas.Top="99"/>
+                <Label Content="суток" HorizontalAlignment="Left" Height="37" VerticalAlignment="Top" Width="73" RenderTransformOrigin="0.625,1.235" Canvas.Left="672" Canvas.Top="139"/>
+                <Label Content="%" HorizontalAlignment="Left" Height="37" VerticalAlignment="Top" Width="41" RenderTransformOrigin="0.625,1.235" Canvas.Left="672" Canvas.Top="176"/>
+                <Label Content="С °" HorizontalAlignment="Left" Height="37" VerticalAlignment="Top" Width="41" RenderTransformOrigin="0.625,1.235" Canvas.Left="672" Canvas.Top="212"/>
+
+            </Canvas>
+
+
+        </Expander>
+        <DataGrid x:Name="dataGrid2" HorizontalAlignment="Left" Height="65" Margin="35,427,0,0" VerticalAlignment="Top" Width="342" VerticalGridLinesBrush="#FF545151" HorizontalGridLinesBrush="#FF545151"/>
+        <ScrollViewer Grid.Column="4" HorizontalAlignment="Left" Height="100" Margin="286.8,427,0,0" VerticalAlignment="Top" Width="100"/>
+        <Expander Grid.Column="1" Header="Добавить материал" HorizontalAlignment="Left" Height="57" Margin="287.6,313,0,0" VerticalAlignment="Top" Width="259" FontSize="20" Grid.ColumnSpan="3">
+
+        </Expander>
+
+
+    </Grid>
+
+
+
+
+
+
 </Window>
