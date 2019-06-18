@@ -167,10 +167,10 @@ namespace teplo_ras
         {
 
 
-            string MyConString = "server=localhost;user=root;database=123;password=12345;";
+           // string MyConString = "server=localhost;user=root;database=123;password=12345;";
 
             string sql = "SELECT * FROM har_mat";
-            using (MySqlConnection connection = new MySqlConnection(MyConString))
+            using (MySqlConnection connection = new MySqlConnection(connStr))
             {
                 connection.Open();
                 using (MySqlCommand cmdSel = new MySqlCommand(sql, connection))
@@ -256,14 +256,14 @@ namespace teplo_ras
 
         private void ComboBox3_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            string MyConString = "server=localhost;user=root;database=123;password=12345;";         
+          //  string MyConString = "server=localhost;user=root;database=123;password=12345;";         
             string sql = "SELECT  `PodPodMat`,`plotnost`,`udelnaya_teployemkodt`from podcat, har_mat WHERE  PodPodMat =  '" + comboBox3.SelectedItem + "' AND podcat.id = har_mat.id";
 
          //  string sql1 = "SstringELECT  `подподМат`,`плотность`,`улельная теплоемкость`from podcat, har_mat WHERE  подподМат =  '" + comboBox3.Text + "' AND podcat.id = har_mat.id";
             // string sql = "SELECT * FROM podcat where подподМат =  '" + comboBox3.Text + "' ; ";
            
 
-            using (MySqlConnection connection = new MySqlConnection(MyConString))
+            using (MySqlConnection connection = new MySqlConnection(connStr))
             {
                 connection.Open();
                 using (MySqlCommand cmdSel = new MySqlCommand(sql, connection))
